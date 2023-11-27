@@ -30,7 +30,7 @@ const Input: React.FC<InputProps> = ({
                 pb-1
                 w-full
                 text-md
-                text-white
+                text-gray
                 bg-neutral-700
                 appearance-none
                 focus:outline-none
@@ -43,6 +43,7 @@ const Input: React.FC<InputProps> = ({
                 className="
                 absolute
                 text-md
+                text-white
                 text-zinc-400
                 duration-150
                 transform

@@ -13,11 +13,11 @@ export default NextAuth({
     providers: [
         GithubProvider({
             clientId: process.env.GITHUB_ID || '',
-            clientSecret: process.env.GITHUB_SECRET || ''
+            clientSecret: process.env.GITHUB_SECRET || '',
         }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID || '',
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET || ''
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
         }),
         Credentials({
             id: 'credentials',
@@ -57,12 +57,12 @@ export default NextAuth({
         })
     ],
     pages: {
-        signIn: '/auth',
+        signIn: '/auth'
     },
     debug: process.env.NODE_ENV === 'development',
     adapter: PrismaAdapter(prismadb),
     session: {
-        strategy: 'jwt',
+        strategy: 'jwt'
     },
     jwt: {
         secret: process.env.NEXTAUTH_JWT_SECRET,

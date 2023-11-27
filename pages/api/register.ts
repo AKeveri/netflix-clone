@@ -28,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 name,
                 hashedPassword,
                 image: '',
-                emailVertified: new Date(),
+                emailVerified: new Date(),
             }
         });
         return res.status(200).json(user);
