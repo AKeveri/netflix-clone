@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import serverAuht from "@/lib/serverAuth";
+import serverAuth from "@/lib/serverAuth";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             return res.status(405).end();
         }
 
-        const { currentUser } = await serverAuht(req);
+        const { currentUser } = await serverAuth(req);
 
         return res.status(200).json(currentUser);
     } catch (error) {

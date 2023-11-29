@@ -28,7 +28,7 @@ const MovieCard: React.FC<MovieCardProps> = ({
             sm:group-hover:opacity-0
             delay-300
             w-full
-            h-[12vw]1
+            h-[12vw]
             "
                 src={data.thumbnailUrl} alt=" Thumbnail" />
             <div

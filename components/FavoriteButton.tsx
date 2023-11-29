@@ -1,9 +1,9 @@
-import axios from "axios"
-import React, { useCallback, useMemo } from "react"
-import { AiOutlinePlus, AiOutlineCheck } from "react-icons/ai"
+import axios from "axios";
+import React, { useCallback, useMemo } from "react";
+import { AiOutlinePlus, AiOutlineCheck } from "react-icons/ai";
 
-import useCurrentUser from "@/hooks/useCurrentUser"
-import useFavorites from "@/hooks/useFavorites"
+import useCurrentUser from "@/hooks/useCurrentUser";
+import useFavorites from "@/hooks/useFavorites";
 
 interface FavoriteButtonProps {
     movieId: string;
@@ -28,7 +28,7 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({ movieId }) => {
             response = await axios.post('/api/favorite', { movieId });
         }
 
-        const updatedFavoriteIds = response?.data?.favorites;
+        const updatedFavoriteIds = response?.data?.favoritesIds;
 
         mutate({
             ...currentUser,
