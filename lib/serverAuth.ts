@@ -3,7 +3,7 @@ import { getSession } from "next-auth/react";
 
 import prismadb from '@/lib/prismadb';
 
-const serverAuht = async (req: NextApiRequest) => {
+const serverAuth = async (req: NextApiRequest) => {
     const session = await getSession({ req });
 
     if (!session?.user?.email) {
@@ -23,4 +23,4 @@ const serverAuht = async (req: NextApiRequest) => {
     return { currentUser };
 };
 
-export default serverAuht;
+export default serverAuth;
