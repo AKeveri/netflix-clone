@@ -3,7 +3,7 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { useRouter } from "next/router";
 
 interface PlayButtonPorps {
-    movieId: string
+    movieId: string;
 }
 
 const PlayButton: React.FC<PlayButtonPorps> = ({ movieId }) => {
